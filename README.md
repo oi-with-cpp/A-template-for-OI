@@ -18,6 +18,11 @@ void Mashiro::read(T& x)
 
 行为：不用说了吧。
 
+e.g.
+```cpp
+read(x,y,z,n);
+```
+
 #### 快输
 
 ```cpp
@@ -33,7 +38,12 @@ void Mashiro::write(T x)
 
 返回值：无。
 
-行为：不用说了吧。
+行为：不用说了吧。另外，输出的多个数之间自动用空格隔开。
+
+e.g.
+```cpp
+write(x,y,z,n);
+```
 
 [^1]: 泛指所有整形存储的类型，包括但不限于`int`,`long long`,`__int128`。快输同
 
