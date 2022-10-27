@@ -37,12 +37,25 @@ namespace Mashiro {
      }
 }
 using namespace Mashiro;
+namespace Misaka{//Debug
+    auto seed=std::chrono::system_clock::now().time_since_epoch().count();
+    std::mt19937 rnd(seed);
+    template<typename T>T random(T l, T r) {// [-INTMAX,INTMAX]
+    	 return std::uniform_int_distribution<T>(l,r)(rnd); 
+    }
+    template<typename ItType>inline void Array_Print(ItType __first,ItType __end){
+        for(ItType it=__first;it!=__end;++it)write(*it);
+        putc('\n');
+    }
+    #define Time(T) while((double)clock()/CLOCKS_PER_SEC<T) 
+    #define Pause cout<<endl;system("pause");
+}
 namespace Saratoga{//Operatoration On Array 
     //Process by Boring314
     template <typename IteratorTYPE, typename _Compare>inline vector<int> Discretization(IteratorTYPE __first, IteratorTYPE __last, _Compare __comp) {
         typedef typename iterator_traits<IteratorTYPE>::difference_type _DistanceType;
         typedef typename iterator_traits<IteratorTYPE>::value_type _ValType;
-        _DistanceType __len = distance(__first, __last);
+        int __len = distance(__first, __last);
         vector<_ValType> Discretization_Temp(__len);
         Discretization_Temp.clear();
         for (auto it = __first; it != __last; ++it) {
@@ -52,10 +65,10 @@ namespace Saratoga{//Operatoration On Array
         Rank.clear();
         sort(Discretization_Temp.begin(), Discretization_Temp.end(), __comp);
         auto new_end = unique(Discretization_Temp.begin(), Discretization_Temp.end());
-        auto __it = __first;
-        for (_DistanceType i(1); i <= __len; ++i) {
-            Rank[i] = lower_bound(Discretization_Temp.begin(), new_end,*__it, __comp) - Discretization_Temp.begin() + 1;
-            ++__it;
+        auto st = __first;
+        for (int i(1); i <= __len; ++i) {
+            Rank[i] = lower_bound(Discretization_Temp.begin(), new_end,*st, __comp) - Discretization_Temp.begin() + 1;
+            ++st;
         }
         return Rank;
     }
@@ -111,15 +124,6 @@ namespace HMS_Cheshire{//Math
         }
         return prime;
     }
-}
-namespace Misaka{//Debug
-    auto seed=std::chrono::system_clock::now().time_since_epoch().count();
-    std::mt19937 rnd(seed);
-    template<typename T>T random(T l, T r) {// [-INTMAX,INTMAX]
-    	 return std::uniform_int_distribution<T>(l,r)(rnd); 
-    }
-    #define Time(T) while((double)clock()/CLOCKS_PER_SEC<T) 
-    #define Pause cout<<endl;system("pause");
 }
 int main() {
     
