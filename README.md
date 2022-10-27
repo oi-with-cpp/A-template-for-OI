@@ -10,7 +10,7 @@ vector<int> Saratoga::Discretization(IteratorTYPE __first, IteratorTYPE __last, 
 ```
 使用方法：
 
-传入两个迭代器(指针)`__first`与`__last`，表示一个左闭右开区间[`__first`,`__last`);一个比较函数 __comp。
+传入两个迭代器(指针)`__first`与`__last`，表示一个左闭右开区间[`__first`,`__last`);一个比较函数` __comp`。
 
 返回值：一个`vector<int>`，表示离散化之后的数组 (即Rank)
 
