@@ -12,7 +12,7 @@ void Mashiro::read(T& x)
 ```
 使用方法：
 
-传入多个地址。
+传入多个整数[^1]参数地址。
 
 返回值：无。
 
@@ -34,6 +34,8 @@ void Mashiro::write(T x)
 返回值：无。
 
 行为：不用说了吧。
+
+[^1]: 泛指所有整形存储的类型，包括但不限于`int`,`long long`,`__int128`。
 
 ### 序列操作 `namespace Saratoga`
 #### 离散化:
