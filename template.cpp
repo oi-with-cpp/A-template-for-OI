@@ -55,20 +55,19 @@ namespace Saratoga{//Operatoration On Array
     template <typename IteratorTYPE, typename _Compare>inline vector<int> Discretization(IteratorTYPE __first, IteratorTYPE __last, _Compare __comp) {
         typedef typename iterator_traits<IteratorTYPE>::difference_type _DistanceType;
         typedef typename iterator_traits<IteratorTYPE>::value_type _ValType;
-        int __len = distance(__first, __last);
-        vector<_ValType> Discretization_Temp(__len);
-        Discretization_Temp.clear();
-        for (auto it = __first; it != __last; ++it) {
+        _DistanceType __len = distance(__first, __last);
+        vector<_ValType> Discretization_Temp(__first,__last);
+        /*for (auto it = __first; it != __last; ++it) {
             Discretization_Temp.push_back(*it);
-        }
+        }*/
         vector<int> Rank(__len + 1);
         Rank.clear();
         sort(Discretization_Temp.begin(), Discretization_Temp.end(), __comp);
         auto new_end = unique(Discretization_Temp.begin(), Discretization_Temp.end());
-        auto st = __first;
-        for (int i(1); i <= __len; ++i) {
-            Rank[i] = lower_bound(Discretization_Temp.begin(), new_end,*st, __comp) - Discretization_Temp.begin() + 1;
-            ++st;
+        auto __it = __first;
+        for (_DistanceType i(1); i <= __len; ++i) {
+            Rank[i] = lower_bound(Discretization_Temp.begin(), new_end,*__it, __comp) - Discretization_Temp.begin() + 1;
+            ++__it;
         }
         return Rank;
     }
