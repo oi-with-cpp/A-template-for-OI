@@ -1,7 +1,19 @@
 # A-template-for-OI
 超级模板！%%% for 小柴郡
 ## 如何使用
+### 快速IO `namespace Mashiro`
+#### 快读
 
+```cpp
+void Mashiro::read(T& x, Args&... args)
+void Mashiro::read(T& x)
+```
+#### 快输
+
+```cpp
+void Mashiro::write(T x, Args... args)
+void Mashiro::write(T x)
+```
 
 #### 离散化:
 ```cpp
