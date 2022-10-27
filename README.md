@@ -6,12 +6,16 @@
 
 ```cpp
 void Mashiro::read(T& x, Args&... args)
+```
+```cpp
 void Mashiro::read(T& x)
 ```
 #### 快输
 
 ```cpp
 void Mashiro::write(T x, Args... args)
+```
+```cpp
 void Mashiro::write(T x)
 ```
 
