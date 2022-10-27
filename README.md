@@ -5,7 +5,7 @@
 ### 2022/10/27
 更新了离散化，数组输出。
 
-####离散化:
+#### 离散化:
 ```cpp
 
 vector<int> Saratoga::Discretization(IteratorTYPE __first, IteratorTYPE __last, _Compare __comp)
@@ -18,7 +18,7 @@ vector<int> Saratoga::Discretization(IteratorTYPE __first, IteratorTYPE __last, 
 
 行为：对数组进行离散化，使用比较函数自定义比较方式。
 
-####数组输出
+#### 数组输出
 ```cpp
 void Misaka::Array_Print(ItType __first,ItType __end)
 ```
