@@ -18,7 +18,7 @@ void Mashiro::write(T x, Args... args)
 ```cpp
 void Mashiro::write(T x)
 ```
-
+### 数组操作
 #### 离散化:
 ```cpp
 
@@ -32,6 +32,7 @@ vector<int> Saratoga::Discretization(IteratorTYPE __first, IteratorTYPE __last, 
 
 行为：对数组进行离散化，使用比较函数自定义比较方式。
 
+### 调试操作
 #### 数组输出
 ```cpp
 void Misaka::Array_Print(ItType __first,ItType __end)
