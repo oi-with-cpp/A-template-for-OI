@@ -10,6 +10,14 @@ void Mashiro::read(T& x, Args&... args)
 ```cpp
 void Mashiro::read(T& x)
 ```
+使用方法：
+
+传入多个地址。
+
+返回值：无。
+
+行为：不用说了吧。
+
 #### 快输
 
 ```cpp
@@ -18,6 +26,15 @@ void Mashiro::write(T x, Args... args)
 ```cpp
 void Mashiro::write(T x)
 ```
+
+使用方法：
+
+传入多个整数值。
+
+返回值：无。
+
+行为：不用说了吧。
+
 ### 序列操作 `namespace Saratoga`
 #### 离散化:
 ```cpp
@@ -56,6 +73,8 @@ void Misaka::Array_Print(ItType __first,ItType __end)
 返回值：无。
 
 行为：依次输出[`__first`,`__end`)之间的值，仅限整数。
+
+--------
 
 #### 
 ## 更新日志:
