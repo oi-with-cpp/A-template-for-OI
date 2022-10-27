@@ -35,7 +35,7 @@ void Mashiro::write(T x)
 
 行为：不用说了吧。
 
-[^1]: 泛指所有整形存储的类型，包括但不限于`int`,`long long`,`__int128`。
+[^1]: 泛指所有整形存储的类型，包括但不限于`int`,`long long`,`__int128`。快输同
 
 ### 序列操作 `namespace Saratoga`
 #### 离散化:
